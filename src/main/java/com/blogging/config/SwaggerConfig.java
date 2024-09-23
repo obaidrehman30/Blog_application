@@ -59,5 +59,22 @@ public class SwaggerConfig {
         .securitySchemes(Arrays.asList(apiKey()))
         .securityContexts(securityContext());
 	}	
-	 
+	
+	 private ApiInfo apiInfo() {
+		Contact contact = new Contact(
+		        "Ujjawal Prakash",
+		        "https://github.com/ujjawalyt/BloggingApplication",
+		        "ujjawalyt@gmail.com"
+		    );
+		
+		 return new ApiInfoBuilder()
+	                .title("Blogging Application")
+	                .description("This Project is developed by Ujjawal Prakash")
+	                .version("1.0.0")
+	                .contact(contact)
+	                .license("Licence of APIS")
+	                .build();
+		
+     }
+	
 }
